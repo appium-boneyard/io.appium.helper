@@ -6,10 +6,11 @@ android {
 
     defaultConfig {
         applicationId "io.appium.helper"
-        minSdkVersion 17
+        minSdkVersion 10
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        setProperty("archivesBaseName", "appium-helper")
     }
     buildTypes {
         release {

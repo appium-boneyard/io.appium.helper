@@ -3,6 +3,7 @@ package io.appium.helper;
 import android.content.Context;
 import android.location.Location;
 import android.location.LocationManager;
+import android.os.Build;
 import android.os.SystemClock;
 
 public class MockLocationProvider {
@@ -27,8 +28,9 @@ public class MockLocationProvider {
         mockLocation.setAltitude(0);
         mockLocation.setTime(System.currentTimeMillis());
         mockLocation.setAccuracy(1);
-        mockLocation.setElapsedRealtimeNanos(SystemClock.elapsedRealtimeNanos());
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            mockLocation.setElapsedRealtimeNanos(SystemClock.elapsedRealtimeNanos());
+        }
         lm.setTestProviderLocation(providerName, mockLocation);
     }
 }
