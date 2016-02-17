@@ -1,0 +1,23 @@
+{
+  "name": "appium-helper",
+  "version": "0.0.1",
+  "description": "App for dealing with android settings",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "gradle clean build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appium/io.appium.helper.git"
+  },
+  "keywords": [
+    "appium",
+    "settings",
+    "unlock"
+  ],
+  "author": "appium",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/appium/io.appium.helper/issues"
+  }
+}
